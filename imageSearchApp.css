@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1{
+    font-size: 36px;
+}
+#search-result{
+    margin: 0 auto;
+    margin-bottom:60px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width:30%;
+}
+#search-result:hover img{
+    transform: scale(1.05);
+}
+#search-result:hover a{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#search-result img{
+    width: 100%!important;
+    height: 200px!important;
+    object-fit: cover;
+    transition: tranform 0.3s ease-in-out;
+}
+#search-result a{
+    padding: 10px;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+#show-more{
+    background-color: #008cba;
+    transition: background-color 0.3s ease-in-out;
+    display: none;
+}
+#show-more:hover{
+    background-color: #0077b5;
+}
+
+@media screen and (max-width: 768px) {
+    #search-result{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 480px) {
+    #search-result{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+    }
+    #search-input{
+        width: 85%;
+        margin-bottom: 20px;
+    }
+}
